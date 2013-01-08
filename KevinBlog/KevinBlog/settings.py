@@ -103,12 +103,11 @@ ROOT_URLCONF = 'KevinBlog.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'KevinBlog.wsgi.application'
 
-ROOTDIR = os.path.abspath(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    ROOTDIR + '/blog/views'
+    os.path.join(os.path.dirname(__file__), '..','blog/views')
 )
 
 INSTALLED_APPS = (
