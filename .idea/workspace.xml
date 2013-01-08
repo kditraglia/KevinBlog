@@ -22,6 +22,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KevinBlog/blog/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tests.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KevinBlog/blog/tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -33,13 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KevinBlog/blog/models.py">
+      <file leaf-file-name="manage.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/KevinBlog/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,10 +73,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.18072289">
+            <state line="11" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="121" column="33" selection-start="4403" selection-end="4403" vertical-scroll-proportion="0.49069002">
               <folding />
             </state>
           </provider>
@@ -95,24 +113,6 @@
         <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="14" selection-start="667" selection-end="667" vertical-scroll-proportion="-17.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_post.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views/view_post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="14" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_category.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views/view_category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="14" selection-start="491" selection-end="491" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
@@ -141,6 +141,7 @@
         <option value="$PROJECT_DIR$/KevinBlog/blog/views/view_post.html" />
         <option value="$PROJECT_DIR$/KevinBlog/blog/views/view_category.html" />
         <option value="$PROJECT_DIR$/KevinBlog/KevinBlog/urls.py" />
+        <option value="$PROJECT_DIR$/KevinBlog/KevinBlog/settings.py" />
       </list>
     </option>
   </component>
@@ -458,33 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="6" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="46" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views/view_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="14" selection-start="289" selection-end="289" vertical-scroll-proportion="-5.0">
@@ -513,13 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -529,7 +496,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.18072289">
+        <state line="11" column="31" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="6" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/blog/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="46" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KevinBlog/KevinBlog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="33" selection-start="4403" selection-end="4403" vertical-scroll-proportion="0.49069002">
           <folding />
         </state>
       </provider>
