@@ -2,13 +2,21 @@
         "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>{% block head_title %}Welcome to my blog{% endblock %}</title>
+    <title>Kevin's Blog</title>
     <link rel="stylesheet" href="{{ STATIC_URL }}blog.css" type="text/css">
 </head>
 <body>
-<h1>{% block title %}Welcome to my block{% endblock %}</h1>
+<h1>Kevin DiTraglia's Blog</h1>
+<div id="container">
 {% block content %}
 
 {% endblock %}
+</div>
+<div id="links">
+    <h2>Categories</h2>
+    {% for category in categories %}
+    <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+    {% endfor %}
+</div>
 </body>
 </html>
