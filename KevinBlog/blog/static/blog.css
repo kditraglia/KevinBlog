@@ -1,12 +1,13 @@
 /*** setup ***/
 body 
 { 
-	font:12px/1.5 Verdana,sans-serif; 
-	background:gray; 
+	font:14px/1.5 Verdana,sans-serif; 
+	background: #F0F0FF; 
 }
 h1
 {
-	color:white;
+	color: #5F5D52;
+	display: inline; 
 }
 h2
 {
@@ -16,17 +17,37 @@ h2
 #container
 {
 	position: absolute;
+	right: 320px;
+	left: 230px;
+	background: #FFFFF0;
+	clear:both;
+}
+
+#blogs
+{
 	margin-right: 20px;
-	margin-left: 230px;
+	margin-left: 20px;
 	margin-bottom: 20px;
-	width: 70%;
-	background: white;
+}
+
+#comment
+{
+	background: #EBEBEB;
 }
 
 #links
 {
-        font-size: 90%;
+	z-index: 10;
+	position: absolute;
+	right: 0;
+	margin-right: 70px;
 	padding: 10px 15px 15px 15px;
 	width: 208px;
-	float: right;
+	clear:both;
 }
+
+#footer 
+{
+	position: relative;
+	background: #F0F0FF; 
+} 

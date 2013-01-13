@@ -4,11 +4,11 @@
 
 {% block content %}
 
-	{% if posts %}
-	    {% for post in posts %}
+	{% if allposts %}
+	    {% for post in allposts %}
 	    <h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
 	    <h3>{{ post.posted }}</h3>
-	    {{ post.body }}<br>
+	    {{ post.body|safe }}<br>
 	    <hr>
 	    {% endfor %}
 	{% else %}

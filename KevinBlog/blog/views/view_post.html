@@ -5,5 +5,30 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-{{ post.body }}
+	<h2><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+	<h3>{{ post.posted }}</h3>
+	{{ post.body|safe }}<br>
+	<hr>
+	<form method="post" action="">
+		{% csrf_token %}
+		username: <br>
+		<input size="35" name="username"></input><br>
+		message:<br>
+		<textarea style="resize:none" placeholder="Leave a comment." cols="50" rows="5" name="comment"></textarea>
+		<input type="submit" Value="Post!">
+	</form>
+	<hr>
+	{% if comments %}
+	    {% for comment in comments %}
+			<div id="comment">
+				{{ comment.body }}
+				<p>Posted by {{ comment.user }} on {{ comment.posted }}</p>
+			</div>
+	    {% endfor %}
+	{% else %}
+		<div id="comment">
+			<p>No comments have been left on this post.</p>
+		</div>
+	{% endif %}
+
 {% endblock %}

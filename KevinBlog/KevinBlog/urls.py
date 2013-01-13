@@ -10,11 +10,11 @@ urlpatterns = patterns('',
     (r'^$', 'blog.views.index'),
     (r'^admin/', include(admin.site.urls)),
     url(
-        r'^blog/view/(?P<slug>[^\.]+).html',
+        r'^blog/view/(?P<slug>[^\.]+)',
         'blog.views.view_post',
         name='view_blog_post'),
     url(
-        r'^blog/category/(?P<slug>[^\.]+).html',
+        r'^blog/category/(?P<slug>[^\.]+)',
         'blog.views.view_category',
         name='view_blog_category'),
 )
