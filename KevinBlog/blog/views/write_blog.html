@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{STATIC_URL}}Markdown.Converter.js" ></script>
+<script type="text/javascript" src="{{STATIC_URL}}Markdown.Sanitizer.js" ></script>
+<script type="text/javascript" src="{{STATIC_URL}}Markdown.Editor.js" ></script>
+
+</head>
+<body>
+<script text="text/javascript">
+$(document).ready(function(){
+    function myFunc(){
+        var input = $("#myTxt").val();
+		var converter = new Markdown.Converter();
+        $("#txtHere").html(converter.makeHtml(input));
+    }       
+    myFunc();
+
+    $('#myTxt').keyup(function(){
+        myFunc();
+    });
+	
+	//and this for good measure
+    $('#myTxt').change(function(){
+        myFunc(); //or direct assignment $('#txtHere').html($(this).val());
+    });
+});
+</script>
+<textarea style="width: 600px; height: 450px;" id="myTxt"></textarea>
+<p id="txtHere"></p>
+</body>
+</html>

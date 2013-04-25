@@ -9,6 +9,10 @@ def index(request):
         'allposts': Blog.objects.all().order_by('-posted')[:5]
     }, context_instance=RequestContext(request))
 
+def write_blog(request):
+    return render_to_response('write_blog.html', {
+    }, context_instance=RequestContext(request))
+
 def view_post(request, slug):
     post = get_object_or_404(Blog, slug=slug)
     if request.method == 'POST':
