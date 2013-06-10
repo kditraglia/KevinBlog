@@ -1,7 +1,7 @@
 # Django settings for KevinBlog project.
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -138,3 +138,6 @@ LOGGING = {
         },
     }
 }
+# Hosts/domain names that are valid for this site; required if DEBUG is False
+# See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
+ALLOWED_HOSTS = [ 'ditraglia.net' ]
