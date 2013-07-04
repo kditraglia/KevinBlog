@@ -1,6 +1,12 @@
 from django.db import models
 from django.db.models import permalink
 
+class Picture(models.Model):
+    name = models.CharField(max_length=100)
+    app_logo = models.ImageField(upload_to='static/uploaded_pics/', null=True, blank=True)
+    def __unicode__(self):
+        return self.name
+
 class Blog(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)

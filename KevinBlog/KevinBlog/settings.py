@@ -23,6 +23,7 @@ DATABASES = {
 
 TIME_ZONE = 'America/Detroit'
 LANGUAGE_CODE = 'en-us'
+FILE_UPLOAD_PERMISSIONS = 0644
 
 SITE_ID = 1
 
@@ -39,7 +40,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/kevin/Projects/KevinBlog/KevinBlog/blog/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
