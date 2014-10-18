@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'kevinblog',
         'USER': 'root',
         'PASSWORD': '0',
@@ -141,4 +141,4 @@ LOGGING = {
 }
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = [ 'ditraglia.net' ]
+ALLOWED_HOSTS = [ 'ditraglia.net', 'www.ditraglia.net', '127.0.0.1' ]

@@ -1,6 +1,5 @@
 import akismet
-from blog.models import Blog, Category, Comment, Picture
-from blog.forms import UploadForm
+from blog.models import Blog, Category, Comment
 from django.shortcuts import render_to_response, get_object_or_404, render
 from django.http import HttpResponse
 from django.template import RequestContext
@@ -9,6 +8,7 @@ my_api_key = '65c78bc3166d'
 
 def index(request):
     return render_to_response('index.html', {
+        'comments' : Comment.objects.all()[:5],
         'categories': Category.objects.all(),
         'allposts': Blog.objects.all().order_by('-posted')[:5]
     }, context_instance=RequestContext(request))
@@ -55,29 +55,3 @@ def view_category(request, slug):
         'posts': Blog.objects.filter(category=category)[:5],
         'allposts': Blog.objects.all()[:5]
     }, context_instance=RequestContext(request))
-
-def show_pics(request):
-    return render_to_response('show_pics.html', {
-      'pics': Picture.objects.all()
-    }, context_instance=RequestContext(request))
-
-def upload_view(request):
-    if request.method == 'POST':
-        data = UploadForm(request.POST, request.FILES)
-        if data.is_valid():
-            data.save()
-            return render_to_response('show_pics.html', {
-              'pics': Picture.objects.all()
-            }, context_instance=RequestContext(request))
-        else:
-            render('wtf')
-    else:
-        form = UploadForm()
-        return render(request, 'upload_form.html', {'form': form})
-
-def handle_uploaded_file(f):
-    with open('some/file/name.txt', 'wb+') as destination:
-        for chunk in f.chunks():
-            destination.write(chunk)
-
-

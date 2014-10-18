@@ -1,46 +1,128 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-	    <title>Kevin's Blog</title>
-	    <link rel="stylesheet" href="{{ STATIC_URL }}blog.css" type="text/css">
-      <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-	</head>
-	<body>
-		<a href="/">
-		<table>
-			<tr>
-				<td><image src="{{ STATIC_URL }}pic.jpg">
-				<td><h1>Kevin DiTraglia's Blog</h1><br>
-				<span style="color:black;">Where I write about stuff!</span>
-			</tr>
-		</table>
-		</a>
-		<div id="container">
-			<div id="blogs">
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kevin's Blog">
+    <meta name="author" content="Kevin DiTraglia">
+    <title>Home</title>
+
+    <!-- Bootstrap CSS file -->
+    <link href="{{ STATIC_URL }}bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ STATIC_URL }}bootstrap-3.2.0-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="{{ STATIC_URL }}blog.css" rel="stylesheet">
+</head>
+ 
+<body>
+    <!-- Jquery and Bootstrap Script files -->
+    <script src="{{ STATIC_URL }}jquery-1.11.1.min.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+	<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">  
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a href="/" class="navbar-brand">Kevin's Blog</a>
+	        </div>
+	        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+	            <form class="navbar-form navbar-right" role="search">
+	              <div class="form-group">
+	                <input type="text" class="form-control" placeholder="Search">
+	              </div>
+	              <button type="submit" class="btn btn-default">Submit</button>
+	            </form>
+	            <ul class="nav navbar-nav">
+	                <li class="active"><a href="/">Home</a></li>
+	                <li><a href="contact.html">Contact</a></li>
+	                <li><a href="about.html">About</a></li>
+	            </ul>
+	        </nav>
+	    </div>
+	</header>
+ 
+    <div id="body" class="container">   
+    	<div class="row">
+		    <div class="col-md-8">
 				{% block content %}
 
 				{% endblock %}
-			</div>
-			<div id="footer">
-				Content © 2013 Kevin DiTraglia. All Rights Reserved.
+				<!-- pager -->
+	            <ul class="pager"> 
+	                <li class="previous">
+	                    <a href="#">← Older</a>
+	                </li> 
+	                <li class="next">
+	                    <a href="#">Newer →</a>
+	                </li> 
+	            </ul>
+		    </div>
+			<div class="col-md-4">
+			    <div class="panel panel-default">
+				    <div class="panel-heading">
+				        <h4>Latest Posts</h4>
+				    </div>
+				    <ul class="list-group">
+				    {% for post in allposts %}
+				        <li class="list-group-item"><a href=""{{ post.get_absolute_url }}"">{{ post.title }}</a></li>
+				    {% endfor %}
+				   	</ul>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading">
+				        <h4>Categories</h4>
+				    </div>
+				    <ul class="list-group">
+				    {% for category in categories %}
+				        <li class="list-group-item"><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+				    {% endfor %}
+				    </ul>
+				</div>
+				 
+				 
+				<div class="panel panel-default">
+				    <div class="panel-heading">
+				        <h4>Recent Comments</h4>
+				    </div>
+				    <ul class="list-group">
+				    	{% for comment in comments %}
+				        <li class="list-group-item"><a href="{{ comment.post.get_absolute_url }}">{{ comment.body }}</a></li>
+				        {% endfor %}
+				    </ul>
+				</div>
+				<div class="panel panel-default">
+				    <div class="panel-heading">
+				        <h4>Tags</h4>
+				    </div>
+				    <div class="panel-body">
+				        <ul class="list-inline">
+				            <li><a href="#">Aries</a></li>
+				            <li><a href="#">Fire</a></li>
+				            <li><a href="#">Mars</a></li>
+				            <li><a href="#">Taurus</a></li>
+				            <li><a href="#">Earth</a></li>
+				            <li><a href="#">Moon</a></li>
+				            <li><a href="#">Gemini</a></li>
+				            <li><a href="#">Air</a></li>
+				            <li><a href="#">Mercury</a></li>
+				            <li><a href="#">Cancer</a></li>
+				        </ul>
+				    </div>
+				</div>
 			</div>
 		</div>
-		<div id="links">
-			<hr>
-			<h2>Categories</h2>
-			{% for category in categories %}
-			<li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-			{% endfor %}
-			<hr>
-			<h2>Recent Posts</h2>
-			{% for post in allposts %}
-			<li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-			{% endfor %}
-			<hr>
-			<a href="http://stackexchange.com/users/1383921">
-			<img src="http://stackexchange.com/users/flair/1383921.png" width="208" height="58" alt="profile for KDiTraglia on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for KDiTraglia on Stack Exchange, a network of free, community-driven Q&amp;A sites">
-			</a>
-		</div>
-	</body>
+    </div>
+ 
+	<footer>
+	    <div class="container">
+	        <hr />
+	        <p class="text-center">Copyright © Kevin DiTraglia 2014. All rights reserved.</p>
+	    </div>
+	</footer>
+</body>
 </html>

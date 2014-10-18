@@ -1,53 +1,11 @@
-/*** setup ***/
-body 
-{ 
-	font:14px/1.5 Verdana,sans-serif; 
-	background: #F0F0FF; 
+@media (min-width: 768px) { /* tablets and up */ 
+    .group2 {
+        text-align: right;
+    }
 }
-h1
-{
-	color: #5F5D52;
-	display: inline; 
-}
-h2
-{
-	color:black;
-}
-
-#container
-{
-	position: absolute;
-	right: 320px;
-	left: 230px;
-	background: #FFFFF0;
-	clear:both;
-}
-
-#blogs
-{
-	margin-right: 20px;
-	margin-left: 20px;
-	margin-bottom: 20px;
-}
-
-#comment
-{
-	background: #EBEBEB;
-}
-
-#links
-{
-	z-index: 10;
-	position: absolute;
-	right: 0;
-	margin-right: 70px;
-	padding: 10px 15px 15px 15px;
-	width: 208px;
-	clear:both;
-}
-
-#footer 
-{
-	position: relative;
-	background: #F0F0FF; 
+body {
+    margin-top: 75px;
 } 
+footer {
+    margin: 10px 0;
+}
