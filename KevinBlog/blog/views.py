@@ -1,5 +1,5 @@
 import akismet
-from blog.models import Blog, Category, Comment
+from blog.models import Blog, Category, Tag, Comment
 from django.shortcuts import render_to_response, get_object_or_404, render
 from django.http import HttpResponse
 from django.template import RequestContext
@@ -9,6 +9,7 @@ my_api_key = '65c78bc3166d'
 def index(request):
     return render_to_response('index.html', {
         'comments' : Comment.objects.all()[:5],
+        'tags': Tag.objects.all()[:5],
         'categories': Category.objects.all(),
         'allposts': Blog.objects.all().order_by('-posted')[:5]
     }, context_instance=RequestContext(request))
@@ -33,8 +34,10 @@ def view_post(request, slug):
           return HttpResponse("PLEASE STOP SPAMMING ME")
 
     return render_to_response('view_post.html', {
+            'comments' : Comment.objects.all()[:5],
+            'tags': Tag.objects.all()[:5],
 		    'categories': Category.objects.all(),
-        'post': post,
+            'post': post,
 		    'allposts': Blog.objects.all()[:5],
 		    'comments': Comment.objects.filter(post=post),
     }, context_instance=RequestContext(request))
@@ -50,8 +53,21 @@ def get_client_ip(request):
 def view_category(request, slug):
     category = get_object_or_404(Category, slug=slug)
     return render_to_response('view_category.html', {
+        'comments' : Comment.objects.all()[:5],
+        'tags': Tag.objects.all()[:5],
         'categories': Category.objects.all(),
         'category': category,
         'posts': Blog.objects.filter(category=category)[:5],
+        'allposts': Blog.objects.all()[:5]
+    }, context_instance=RequestContext(request))
+
+def view_tag(request, slug):
+    tag = get_object_or_404(Tag, slug=slug)
+    return render_to_response('view_tag.html', {
+        'comments' : Comment.objects.all()[:5],
+        'tags': Tag.objects.all()[:5],
+        'categories': Category.objects.all(),
+        'tag': tag,
+        'posts': Blog.objects.filter(tag=tag)[:5],
         'allposts': Blog.objects.all()[:5]
     }, context_instance=RequestContext(request))

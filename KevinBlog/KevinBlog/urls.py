@@ -18,5 +18,9 @@ urlpatterns = patterns('',
         r'^blog/category/(?P<slug>[^\.]+)',
         'blog.views.view_category',
         name='view_blog_category'),
+    url(
+        r'^blog/tag/(?P<slug>[^\.]+)',
+        'blog.views.view_tag',
+        name='view_blog_tag'),
 )
 

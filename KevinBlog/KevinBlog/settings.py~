@@ -1,8 +1,12 @@
 # Django settings for KevinBlog project.
 import os
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 ADMINS = (
      ('Kevin DiTraglia', 'ktd2@case.edu'),
@@ -13,7 +17,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'kevinblog',
+        'NAME': '/home/kevin/Projects/KevinBlog/kevinblog',
         'USER': 'root',
         'PASSWORD': '0',
         'HOST': '',
@@ -40,7 +44,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/kevin/Projects/KevinBlog/KevinBlog/blog/static/'
+MEDIA_ROOT = 'blog/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -51,7 +55,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = 'blog/static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -99,10 +103,8 @@ ROOT_URLCONF = 'KevinBlog.urls'
 WSGI_APPLICATION = 'KevinBlog.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    os.path.join(os.path.dirname(__file__), '..','blog/views')
+    os.path.join(BASE_DIR, 'blog/views'),
+    #os.path.join(os.path.dirname(__file__), '..','blog/views')
 )
 
 INSTALLED_APPS = (

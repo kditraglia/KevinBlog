@@ -11,12 +11,13 @@
 		 
 		    <div class="row">
 		        <div class="group1 col-sm-6 col-md-6">
-		            <span class="glyphicon glyphicon-folder-open"></span>  <a href="#">Signs</a>
-		            <span class="glyphicon glyphicon-bookmark"></span> <a href="#">Aries</a>, 
-		            <a href="#">Fire</a>, <a href="#">Mars</a>
+		            <span class="glyphicon glyphicon-folder-open"></span> 
+		            <a href="post.category.get_absolute_url">{{ post.category }}</a>
+		            <span class="glyphicon glyphicon-bookmark"></span> 
+		            <a href="post.tag.get_absolute_url">{{ post.tag }}</a>
 		        </div>
 		        <div class="group2 col-sm-6 col-md-6">
-	                <span class="glyphicon glyphicon-pencil"></span> <a href="singlepost.html#comments">20 Comments</a>                             
+	                <span class="glyphicon glyphicon-pencil"></span> <a href="{{ post.get_absolute_url }}#comments">20 Comments</a>                             
 	                <span class="glyphicon glyphicon-time"></span>{{ post.posted }}
 		        </div>
 		    </div>
@@ -30,7 +31,7 @@
 		    {{ post.body|safe }}
 
 		    <p class="text-right">
-		        <a href="singlepost.html" class="text-right">
+		        <a href="{{ post.get_absolute_url }}" class="text-right">
 		            continue reading...
 		        </a>
 		    </p>
