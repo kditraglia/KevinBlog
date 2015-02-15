@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Posts in {{ tag }}</h2>
+{% if posts %}
+<ul>
+    {% for post in posts %}
+    <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>There are no posts.</p>
+{% endif %}
+{% endblock %}
