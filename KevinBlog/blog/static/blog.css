@@ -9,3 +9,11 @@ body {
 footer {
     margin: 10px 0;
 }
+#comments, #comments li {
+    margin: 0;
+    padding: 0;
+}
+ 
+#comments li {
+    list-style: none;
+}

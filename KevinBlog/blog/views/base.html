@@ -39,7 +39,7 @@
 	            </form>
 	            <ul class="nav navbar-nav">
 	                <li class="active"><a href="/">Home</a></li>
-	                <li><a href="contact.html">Contact</a></li>
+	                <li><a href="contact">Contact</a></li>
 	                <li><a href="about.html">About</a></li>
 	            </ul>
 	        </nav>
@@ -52,17 +52,15 @@
 				{% block content %}
 
 				{% endblock %}
-				<!-- pager -->
-	            <ul class="pager"> 
-	                <li class="previous">
-	                    <a href="#">← Older</a>
-	                </li> 
-	                <li class="next">
-	                    <a href="#">Newer →</a>
-	                </li> 
-	            </ul>
 		    </div>
 			<div class="col-md-4">
+				<!-- Subscribe to my feed widget -->
+			    <div class="well text-center">
+			        <p class="lead">
+			            Don't want to miss updates? Please click the below button!
+			        </p>
+			        <button class="btn btn-primary btn-lg">Subscribe to my feed</button>
+			    </div>
 			    <div class="panel panel-default">
 				    <div class="panel-heading">
 				        <h4>Latest Posts</h4>
@@ -114,7 +112,7 @@
 	<footer>
 	    <div class="container">
 	        <hr />
-	        <p class="text-center">Copyright © Kevin DiTraglia 2014. All rights reserved.</p>
+	        <p class="text-center">Copyright © Kevin DiTraglia 2015. All rights reserved.</p>
 	    </div>
 	</footer>
 </body>

@@ -9,26 +9,54 @@
 	<h3>{{ post.posted }}</h3>
 	{{ post.body|safe }}<br>
 	<hr>
-	<form method="post" action="">
-		{% csrf_token %}
-		username: <br>
-		<input size="35" name="username"></input><br>
-		message:<br>
-		<textarea style="resize:none" placeholder="Leave a comment." cols="50" rows="5" name="comment"></textarea>
-		<input type="submit" Value="Post!">
-	</form>
+	<div class="well">
+	 
+	    <h4>Leave a comment</h4>
+	 
+	    <form role="form" class="clearfix" method="post" action="">
+	 		{% csrf_token %}
+	        <div class="col-md-6 form-group">
+	            <label class="sr-only" for="name">Name</label>
+	            <input type="text" class="form-control" id="name" name="username" placeholder="Name">
+	        </div>
+	 
+	        <div class="col-md-6 form-group">
+	            <label class="sr-only" for="email">Email</label>
+	            <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+	        </div>
+	 
+	        <div class="col-md-12 form-group">
+	            <label class="sr-only" for="email">Comment</label>
+	            <textarea class="form-control" id="comment" name="comment" placeholder="Comment"></textarea>
+	        </div>
+	 
+	        <div class="col-md-12 form-group text-right">
+	            <button type="submit" class="btn btn-primary">Submit</button>
+	        </div>
+	 
+	    </form>                   
+	</div>
 	<hr>
 	{% if comments %}
-	    {% for comment in comments %}
-			<div id="comment">
-				{{ comment.body }}
-				<p>Posted by {{ comment.user }} on {{ comment.posted }}</p>
-			</div>
-	    {% endfor %}
+		<ul id="comments" class="comments">
+		    {% for comment in comments %}
+		    <li class="comment">
+		        <div class="clearfix">
+		            <h4 class="pull-left">{{ comment.user }}</h4>
+		            <p class="pull-right">{{ comment.posted }}</p>
+		        </div>
+		        <p>
+		            <em>{{ comment.body }}</em>
+		        </p>
+	    	</li>
+		    {% endfor %}
+		</ul>
 	{% else %}
 		<div id="comment">
 			<p>No comments have been left on this post.</p>
 		</div>
 	{% endif %}
-
+	<ul class="pager">
+	    <li class="previous"><a href="/">← Back to posts</a></li>
+	</ul>
 {% endblock %}
