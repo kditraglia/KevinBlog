@@ -74,6 +74,7 @@ def view_tag(request, slug):
 
 def contact_me(request):
     return render_to_response('contact_me.html', {
+        'title' : 'contact',
         'comments' : Comment.objects.all()[:5],
         'tags': Tag.objects.all()[:5],
         'categories': Category.objects.all(),

@@ -9,6 +9,9 @@
 	<h3>{{ post.posted }}</h3>
 	{{ post.body|safe }}<br>
 	<hr>
+	<ul class="pager">
+   		<li class="previous"><a href="/">← Back to posts</a></li>
+	</ul>
 	<div class="well">
 	 
 	    <h4>Leave a comment</h4>
@@ -56,7 +59,4 @@
 			<p>No comments have been left on this post.</p>
 		</div>
 	{% endif %}
-	<ul class="pager">
-	    <li class="previous"><a href="/">← Back to posts</a></li>
-	</ul>
 {% endblock %}
