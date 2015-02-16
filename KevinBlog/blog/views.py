@@ -80,3 +80,12 @@ def contact_me(request):
         'categories': Category.objects.all(),
         'allposts': Blog.objects.all()[:5]
     }, context_instance=RequestContext(request))
+
+def about(request):
+    return render_to_response('about.html', {
+        'title' : 'about',
+        'comments' : Comment.objects.all()[:5],
+        'tags': Tag.objects.all()[:5],
+        'categories': Category.objects.all(),
+        'allposts': Blog.objects.all()[:5]
+    }, context_instance=RequestContext(request))

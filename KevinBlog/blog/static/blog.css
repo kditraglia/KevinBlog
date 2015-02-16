@@ -13,7 +13,12 @@ footer {
     margin: 0;
     padding: 0;
 }
- 
 #comments li {
     list-style: none;
+}
+.photo {
+    margin-bottom: 10px;
+}
+.social-buttons button {
+    margin-top: 5px;
 }

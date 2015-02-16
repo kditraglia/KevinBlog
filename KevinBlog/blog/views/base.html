@@ -38,15 +38,11 @@
 	              <button type="submit" class="btn btn-default">Submit</button>
 	            </form>
 	            <ul class="nav navbar-nav">
-	            	{% if not title %}
-	            		<li class="active"><a href="/">Home</a></li>
-		                <li><a href="contact">Contact</a></li>
-		                <li><a href="about.html">About</a></li>
-		            {% elif title == "contact" %}
-		                <li><a href="/">Home</a></li>
-		                <li class="active"><a href="contact">Contact</a></li>
-		                <li><a href="about.html">About</a></li>
-		            {% endif %}
+
+		                <li {% if not title %} class="active" {% endif %}><a href="/">Home</a></li>
+		                <li {% if title == "contact" %} class="active" {% endif %}><a href="/contact">Contact</a></li>
+		                <li {% if title == "about" %} class="active" {% endif %}><a href="/about">About</a></li>
+
 	            </ul>
 	        </nav>
 	    </div>

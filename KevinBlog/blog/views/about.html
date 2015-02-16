@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+{% extends 'base.html' %}
+{% block content %}
+    <h1>About Me</h1>
+ 
+	<div class="row">
+	    <div class="col-md-3 col-sm-3">
+	        <img class="img-thumbnail img-responsive photo" src="{{STATIC_URL}}pic.jpg" />
+	        <p class="social-buttons text-center">
+			    <a href="https://bitbucket.org/teamsparkrat"><button type="button" class="btn btn-primary btn-lg">My Bitbucket</button></a>
+			    <a href="https://github.com/kditraglia"><button type="button" class="btn btn-default btn-lg">My Github</button></a>
+			</p>
+	    </div>
+	    <div class="col-md-9 col-sm-9">
+	        <p>
+	             Hello, my name is Kevin DiTraglia.  I am a computer programmer that graduated with a degree in computer engineering currently working at Hyland Software in Westlake, OH.  I also am a co-founder of the LLC partnership SparkRat, which has released threes of apps.  I have experience programming .NET applications, windows phone apps, android apps, iOS apps, and playing around with Python (such as this website!).  I'm hoping to use this blog to share my experiences with the masses, and maybe get some good feedback on my work, including this website, which should be on the bootstrap website, for the most bootstrap looking website ever made.  Sorry if all the buttons don't work, I'm sure I'll fix them eventually.
+	        </p>
+	 
+	        <p>
+	            I don't know how to fill this paragraph more, so, Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	        </p>
+	    </div>
+	    <p class="lead text-center">
+	    	Some projects I've worked on:
+	    </p>
+	    <div class="row">
+		    <div class="col-md-4">
+		        <div class="thumbnail">
+		            <a href="https://play.google.com/store/apps/details?id=com.game.NinjaFlinger">
+		                <img src="https://lh3.ggpht.com/l4cNK5zBpzDvXIXERfou6e9TIxaKAHFJMfjqKJTqwqARCvFUmO898FiJlDw6Fp-jn90=w300-rw" class="img-responsive" />
+		            </a>
+		            <hr>
+		            <div class="caption text-center">
+		                <h4>Ninjaflinger</h4>
+		                <p>
+		                    Amazing android game!
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="col-md-4">
+		        <div class="thumbnail">
+		            <a href="http://sparkrat.com">
+		                <img src="http://i.imgur.com/79hr1dg.jpg" class="img-responsive" />
+		            </a>
+		            <hr>
+		            <div class="caption text-center">
+		                <h4>SparkRat</h4>
+		                <p>
+		                    My LLC partnership used for releasing various apps
+		                </p>
+		            </div>                                
+		        </div>
+		    </div>
+		    <div class="col-md-4">
+		        <div class="thumbnail">
+		            <a href="http://www.windowsphone.com/en-us/store/app/radlibs/04d7b3af-094e-4ee8-9bf1-4ebfe52fe773">
+		                <img src="http://cdn.marketplaceimages.windowsphone.com/v8/images/4ba24c30-a133-4903-95e0-d06b3a73eb6f?imageType=ws_icon_large" class="img-responsive" />
+		            </a>
+		            <hr>
+		            <div class="caption text-center">
+		                <h4>Radlibs</h4>
+		                <p>
+		                    Awesome Madlibs app for the windows phone store!
+		                </p>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+{% endblock %}
