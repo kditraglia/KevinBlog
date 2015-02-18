@@ -9,6 +9,10 @@ class Blog(models.Model):
     category = models.ForeignKey('blog.Category')
     tag = models.ForeignKey('blog.Tag')
 
+    @property
+    def numComments(self):
+        return Comment.objects.filter(post=self).count()
+
     def __unicode__(self):
         return '%s' % self.title
 
