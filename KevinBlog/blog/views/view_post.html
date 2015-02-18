@@ -43,7 +43,7 @@
 	{% if comments %}
 		<ul id="comments" class="comments">
 		    {% for comment in comments %}
-		    <li class="comment">
+		    <li class="comment" id="Comment{{ comment.id }}">
 		        <div class="clearfix">
 		            <h4 class="pull-left">{{ comment.user }}</h4>
 		            <p class="pull-right">{{ comment.posted }}</p>
